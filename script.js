@@ -37,7 +37,7 @@ operationEl.forEach((operation) => {
     clearVar(operationName);
     lastOperation = operationName;
   });
-});
+});IgorSeliverstov
 
 function clearVar(name = "") {
   dis1Num += dis2Num + " " + name + " ";
@@ -60,4 +60,28 @@ function mathOperation() {
     result = parseFloat(result) % parseFloat(dis2Num);
   }
 }
+
+equalEl.addEventListener("click", () => {
+  if (!dis2Num || !dis1Num) return;
+  haveDot = false;
+  mathOperation();
+  clearVar();
+  display2El.innerText = result;
+  dis2Num = result;
+  dis1Num = "";
+});
+
+clearAllEl.addEventListener("click", () => {
+  dis1Num = "";
+  dis2Num = "";
+  display1El.innerText = "";
+  display2El.innerText = "";
+  result = "";
+});
+
+clearLastEl.addEventListener("click", () => {
+  display2El.innerText = "";
+  dis2Num = "";
+});
+
 
