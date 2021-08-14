@@ -37,7 +37,7 @@ operationEl.forEach((operation) => {
     clearVar(operationName);
     lastOperation = operationName;
   });
-});IgorSeliverstov
+});
 
 function clearVar(name = "") {
   dis1Num += dis2Num + " " + name + " ";
